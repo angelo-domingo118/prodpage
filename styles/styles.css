@@ -1,0 +1,243 @@
+/* Stylesheet */
+
+/* Variables */
+:root {
+  --primary: #326dee;
+  --light: #f4f4f4;
+  --dark: #333;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  line-height: 1.6;
+  color: var(--dark);
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+a {
+  color: var(--dark);
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+/* Utilities */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 30px;
+  overflow: hidden;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 5px;
+}
+
+/* Header */
+header {
+  background: var(--primary);
+  color: #fff;
+  padding: 1rem;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .logo img {
+  height: 50px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+}
+
+header nav ul li {
+  padding: 0 1rem;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+/* Hero */
+.hero {
+  padding: 100px 0;
+}
+
+.hero .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero .left {
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+/* Hoodies */
+#hoodies {
+  padding: 50px 0;
+}
+
+#hoodies h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+}
+
+#hoodies .products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+#hoodies .product {
+  border: 1px solid var(--light);
+  padding: 30px;
+}
+
+/* Designs */
+#designs {
+  padding: 80px 0;
+}
+
+#designs .container {
+  display: flex;
+  align-items: center;
+}
+
+#designs img {
+  flex: 1;
+}
+
+#designs .right {
+  flex: 1;
+  max-width: 500px;
+  text-align: center;
+  padding: 30px;
+}
+
+/* Contact */
+#contact {
+  padding: 50px 0;
+}
+
+#contact h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+}
+
+#contact form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#contact input[type="text"],
+#contact input[type="email"] {
+  flex: 1;
+  padding: 15px;
+  border: 1px solid var(--light);
+  margin-right: 30px;
+  font-size: 1.1rem;
+}
+
+#contact textarea {
+  flex: 2;
+  padding: 15px;
+  border: 1px solid var(--light);
+  margin-right: 30px;
+  font-size: 1.1rem;
+}
+
+/* Footer */
+footer {
+  background: var(--dark);
+  color: #fff;
+  padding: 50px 0;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .social a {
+  margin-right: 20px;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  header nav {
+    display: none;
+  }
+
+  header .logo {
+    text-align: center;
+    width: 100%;
+  }
+
+  .hero .container {
+    flex-direction: column-reverse;
+  }
+
+  .hero img {
+    width: 80%;
+    margin: auto;
+  }
+
+  #hoodies .products {
+    grid-template-columns: 1fr;
+  }
+
+  #designs .container {
+    flex-direction: column;
+  }
+
+  #designs img {
+    width: 80%;
+    margin: 0 auto 30px;
+  }
+
+  #contact form {
+    flex-direction: column;
+  }
+
+  #contact input[type="text"],
+  #contact input[type="email"] {
+    margin-bottom: 15px;
+  }
+}
